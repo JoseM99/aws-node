@@ -42,10 +42,8 @@ router.post('/' , (req,res) =>{
         }
    });
 
-})
+}) 
 
-
-//METODO PARA EDITAR
 router.put('/:id' , (req,res) =>{
     const {descripcion,precio,stock} = req.body;
     const { id } = req.params;
