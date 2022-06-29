@@ -4,7 +4,7 @@ const app = express();
  
 app.set('port',process.env.PORT || 3000 );
 
- 
+//middelware 
 app.use(express.json());
 
 //Routes

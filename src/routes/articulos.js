@@ -73,7 +73,7 @@ router.get('/:id', (req,res) =>{
 router.post('/' , (req,res) =>{
    const {id,descripcion,precio,stock} = req.body;
    console.log(req.body);
-   const query = `CALL articulosAgregarOrEditar (?,?,?,?); `; 
+   const query =  `CALL articulosAgregarOrEditar (?,?,?,?); `; 
     
    mysqlConnection.query(query,[id,descripcion,precio,stock], (err,rows,fields) =>{
         if(!err){
@@ -85,6 +85,7 @@ router.post('/' , (req,res) =>{
 
 }) 
 
+//METODO PARA 
 router.put('/:id' , (req,res) =>{
     const {descripcion,precio,stock} = req.body;
     const { id } = req.params;
